@@ -1,0 +1,114 @@
+INFO  2024-05-29 15:20:44,373  9175ms GreenhouseApiClient    MoveNext           - Application is starting...
+INFO  2024-05-29 15:20:44,705  9507ms GreenhouseApiClient    MoveNext           - Assiging GreenHouse post api for Account Data https://harvest.greenhouse.io/v1/custom_field/12607913003/custom_field_options
+INFO  2024-05-29 15:20:44,964  9766ms GreenhouseApiClient    MoveNext           - Assiging GreenHouse post api for Project Data https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-29 15:20:45,441 10243ms PUTTUPUP01             GetAccountData     - Getting Account data using sp
+INFO  2024-05-29 15:20:45,450 10252ms PUTTUPUP01             tAccountDataToJson - Converting Account data into json format
+INFO  2024-05-29 15:20:45,562 10364ms GreenhouseApiClient    MoveNext           - getting account json data {"options":[]}
+INFO  2024-05-29 15:20:47,433 12235ms PUTTUPUP01             AddAccountHistory  - Added Account history in to sp
+INFO  2024-05-29 15:20:47,447 12249ms GreenhouseApiClient    MoveNext           - no Account data on this day added that empty fields to AddAccountHistory
+INFO  2024-05-29 15:20:47,455 12258ms GreenhouseApiClient    MoveNext           - Sending Accout Api to PostAccountDataToGHApiAsync  https://harvest.greenhouse.io/v1/custom_field/12607913003/custom_field_options
+INFO  2024-05-29 15:20:48,704 13506ms PUTTUPUP01             GetProjectData     - Getting Project data using sp
+INFO  2024-05-29 15:20:48,716 13518ms PUTTUPUP01             tProjectDataToJson - Converting Project data into json format
+INFO  2024-05-29 15:20:48,733 13535ms GreenhouseApiClient    MoveNext           - getting Project json data {"options":[{"name":"Project Test","priority":0,"external_id":null},{"name":"Project Test","priority":0,"external_id":null}]}
+INFO  2024-05-29 15:20:48,744 13546ms GreenhouseApiClient    MoveNext           - Requsting Post data sending to Green house https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-29 15:20:49,997 14799ms GreenhouseApiClient    MoveNext           - Getting repomse back from Green house {"errors":[{"message":"Duplicate names in options. Names should be unique.","field":"options"}]}
+INFO  2024-05-29 15:20:50,049 14851ms PUTTUPUP01             AddProjectHistory  - Added Project history in to sp
+INFO  2024-05-29 15:20:50,059 14861ms GreenhouseApiClient    MoveNext           - Response from Green house and data sending to sp {
+  "options": [
+    {
+      "name": "Project Test",
+      "priority": 0,
+      "external_id": null
+    },
+    {
+      "name": "Project Test",
+      "priority": 0,
+      "external_id": null
+    }
+  ]
+} UnprocessableEntity {"errors":[{"message":"Duplicate names in options. Names should be unique.","field":"options"}]}
+INFO  2024-05-29 15:20:50,069 14871ms GreenhouseApiClient    MoveNext           - Sending Project Api to PostProjectDataToGHApiAsync  https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-29 15:20:50,077 14879ms GreenhouseApiClient    MoveNext           - Application is ending...
+INFO  2024-05-30 11:49:08,810   854ms GreenhouseApiClient    MoveNext           - Application is starting...
+INFO  2024-05-30 11:49:09,095  1140ms GreenhouseApiClient    MoveNext           - Assiging GreenHouse post api for Account Data https://harvest.greenhouse.io/v1/custom_field/12607913003/custom_field_options
+INFO  2024-05-30 11:49:09,109  1154ms GreenhouseApiClient    MoveNext           - Assiging GreenHouse post api for Project Data https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 11:49:09,719  1764ms CommonGHAPIService     GetAccountData     - Getting Account data using sp
+INFO  2024-05-30 11:49:09,730  1774ms CommonGHAPIService     tAccountDataToJson - Converting Account data into json format
+INFO  2024-05-30 11:49:09,880  1925ms GreenhouseApiClient    MoveNext           - getting account json data {"options":[]}
+INFO  2024-05-30 11:49:09,949  1994ms CommonGHAPIService     AddAccountHistory  - Added Account history in to sp
+INFO  2024-05-30 11:49:09,968  2013ms GreenhouseApiClient    MoveNext           - no Account data on this day added that empty fields to AddAccountHistory
+INFO  2024-05-30 11:49:09,977  2022ms GreenhouseApiClient    MoveNext           - Sending Accout Api to PostAccountDataToGHApiAsync https://harvest.greenhouse.io/v1/custom_field/12607913003/custom_field_options
+INFO  2024-05-30 11:49:10,056  2100ms CommonGHAPIService     GetProjectData     - Getting Project data using sp
+INFO  2024-05-30 11:49:10,066  2111ms CommonGHAPIService     tProjectDataToJson - Converting Project data into json format
+INFO  2024-05-30 11:49:10,094  2139ms GreenhouseApiClient    MoveNext           - getting Project json data {"options":[{"name":"Test3005","priority":0,"external_id":null}]}
+INFO  2024-05-30 11:49:10,108  2153ms GreenhouseApiClient    MoveNext           - Requsting Post data sending to Green house https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 11:49:12,778  4823ms GreenhouseApiClient    MoveNext           - Getting repomse back from Green house {"success":true}
+INFO  2024-05-30 11:49:12,923  4968ms CommonGHAPIService     AddProjectHistory  - Added Project history in to sp
+INFO  2024-05-30 11:49:12,934  4978ms GreenhouseApiClient    MoveNext           - Response from Green house and data sending to sp {
+  "options": [
+    {
+      "name": "Test3005",
+      "priority": 0,
+      "external_id": null
+    }
+  ]
+} - Created - {"success":true}
+INFO  2024-05-30 11:49:12,943  4988ms GreenhouseApiClient    MoveNext           - Sending Project Api to PostProjectDataToGHApiAsync https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 11:49:12,952  4997ms GreenhouseApiClient    MoveNext           - Application is ending...
+INFO  2024-05-30 14:41:48,947   550ms GreenhouseApiClient    MoveNext           - Application is starting...
+INFO  2024-05-30 14:41:49,079   683ms GreenhouseApiClient    MoveNext           - Assiging GreenHouse post api for Account Data https://harvest.greenhouse.io/v1/custom_field/12607913003/custom_field_options
+INFO  2024-05-30 14:41:49,097   701ms GreenhouseApiClient    MoveNext           - Assiging GreenHouse post api for Project Data https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 14:41:49,543  1146ms CommonGHAPIService     GetAccountData     - Getting Account data using sp
+INFO  2024-05-30 14:41:49,555  1159ms CommonGHAPIService     tAccountDataToJson - Converting Account data into json format
+INFO  2024-05-30 14:41:49,645  1248ms GreenhouseApiClient    MoveNext           - getting account json data {"options":[]}
+INFO  2024-05-30 14:41:49,708  1312ms CommonGHAPIService     AddAccountHistory  - Added Account history in to sp
+INFO  2024-05-30 14:41:49,721  1324ms GreenhouseApiClient    MoveNext           - no Account data on this day added that empty fields to AddAccountHistory
+INFO  2024-05-30 14:41:49,731  1335ms GreenhouseApiClient    MoveNext           - Sending Accout Api to PostAccountDataToGHApiAsync https://harvest.greenhouse.io/v1/custom_field/12607913003/custom_field_options
+INFO  2024-05-30 14:41:49,760  1364ms CommonGHAPIService     GetProjectData     - Getting Project data using sp
+INFO  2024-05-30 14:41:49,770  1373ms CommonGHAPIService     tProjectDataToJson - Converting Project data into json format
+INFO  2024-05-30 14:41:49,801  1404ms GreenhouseApiClient    MoveNext           - getting Project json data {"options":[{"name":"Test3005","priority":0,"external_id":null}]}
+INFO  2024-05-30 14:41:49,815  1418ms GreenhouseApiClient    MoveNext           - Requsting Post data sending to Green house https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 14:41:51,723  3326ms GreenhouseApiClient    MoveNext           - Getting repomse back from Green house {"success":true}
+INFO  2024-05-30 14:41:51,804  3407ms CommonGHAPIService     AddProjectHistory  - Added Project history in to sp
+INFO  2024-05-30 14:41:51,817  3421ms GreenhouseApiClient    MoveNext           - Response from Green house and data sending to sp {
+  "options": [
+    {
+      "name": "Test3005",
+      "priority": 0,
+      "external_id": null
+    }
+  ]
+} - Created - {"success":true}
+INFO  2024-05-30 14:41:51,830  3433ms GreenhouseApiClient    MoveNext           - Sending Project Api to PostProjectDataToGHApiAsync https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 14:41:51,840  3443ms GreenhouseApiClient    MoveNext           - Application is ending...
+INFO  2024-05-30 17:01:59,424   735ms GreenhouseApiClient    MoveNext           - Application is starting...
+INFO  2024-05-30 17:01:59,547   858ms GreenhouseApiClient    MoveNext           - Assiging GreenHouse post api for Account Data https://harvest.greenhouse.io/v1/custom_field/12607913003/custom_field_options
+INFO  2024-05-30 17:01:59,557   869ms GreenhouseApiClient    MoveNext           - Assiging GreenHouse post api for Project Data https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 17:02:00,155  1467ms CommonGHAPIService     GetAccountData     - Getting Account data using sp
+INFO  2024-05-30 17:02:00,170  1481ms CommonGHAPIService     tAccountDataToJson - Converting Account data into json format
+INFO  2024-05-30 17:02:00,268  1580ms GreenhouseApiClient    MoveNext           - getting account json data {"options":[]}
+INFO  2024-05-30 17:02:00,284  1596ms CommonGHAPIService     AddAccountHistory  - Added Account history in to sp
+INFO  2024-05-30 17:02:00,318  1630ms GreenhouseApiClient    MoveNext           - no Account data on this day added that empty fields to AddAccountHistory
+INFO  2024-05-30 17:02:00,348  1660ms GreenhouseApiClient    MoveNext           - Sending Accout Api to PostAccountDataToGHApiAsync https://harvest.greenhouse.io/v1/custom_field/12607913003/custom_field_options
+INFO  2024-05-30 17:02:00,411  1722ms CommonGHAPIService     GetProjectData     - Getting Project data using sp
+INFO  2024-05-30 17:02:00,454  1765ms CommonGHAPIService     tProjectDataToJson - Converting Project data into json format
+INFO  2024-05-30 17:02:00,555  1867ms GreenhouseApiClient    MoveNext           - getting Project json data {"options":[{"name":"Test3005","priority":0,"external_id":null},{"name":"test3006","priority":0,"external_id":null}]}
+INFO  2024-05-30 17:02:00,607  1919ms GreenhouseApiClient    MoveNext           - Requsting Post data sending to Green house https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 17:02:03,770  5081ms GreenhouseApiClient    MoveNext           - Getting repomse back from Green house {"success":true}
+INFO  2024-05-30 17:02:03,810  5122ms CommonGHAPIService     AddProjectHistory  - Added Project history in to sp
+INFO  2024-05-30 17:02:03,821  5132ms GreenhouseApiClient    MoveNext           - Response from Green house and data sending to sp {
+  "options": [
+    {
+      "name": "Test3005",
+      "priority": 0,
+      "external_id": null
+    },
+    {
+      "name": "test3006",
+      "priority": 0,
+      "external_id": null
+    }
+  ]
+} - Created - {"success":true}
+INFO  2024-05-30 17:02:03,833  5144ms GreenhouseApiClient    MoveNext           - Sending Project Api to PostProjectDataToGHApiAsync https://harvest.greenhouse.io/v1/custom_field/14427798003/custom_field_options
+INFO  2024-05-30 17:02:03,845  5157ms GreenhouseApiClient    MoveNext           - Application is ending...
